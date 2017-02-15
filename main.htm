@@ -1,0 +1,58 @@
+<div>
+    <span>Welcome to the Angular Store</span><br>
+    <span>Please select the products you want and add them to cart</span><br>
+    <span>When you are done, click the shopping cart icon to review your order and checkout</span><br>  
+  </div>
+  Search: <input type="Search" name="search" class="search-input" id="search" ng-model="searchString"> 
+  <table class="table table-bordered item-table">
+    <thead>
+      <tr>
+        <th colspan="4">
+            <a href="#cart">
+                <img src="icons/cart-icon.png" height="25">
+                <span ng-if="!cartLength">
+                    No item in cart
+                </span>
+                <span ng-if="cartLength">
+                    {{cartLength}} 
+                    <span ng-if="cartLength == 1">item</span>
+                    <span ng-if="cartLength > 1">items</span>
+                    ${{totalAmount}}
+                </span>
+            </a>
+          </th>
+      </tr>
+    </thead>  
+    <tr ng-repeat="fruits in fruitsList | filter : {'name' : searchString}">
+        <td class="icon-placeholder">
+            <img src="{{fruits.icon}}" height="40" width="40" />
+        </td>  
+        <td class="item-details">
+            <a href="#details/{{fruits.id}}">
+                <span>{{fruits.name}}</span><br>
+                <span>{{fruits.description}}</span>
+            </a>
+        </td>  
+        <td>{{fruits.currency}}{{fruits.price}}</td>  
+        <td>
+            <a href="#cart" ng-click="addToCart(fruits)">Add to cart</a>
+        </td>  
+    </tr>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <img src="icons/cart-icon.png" height="25">
+                <span ng-if="!cartLength" class="bold">
+                    No item in cart
+                </span>
+                <span ng-if="cartLength" class="bold">
+                    {{cartLength}} 
+                    <span ng-if="cartLength == 1">item</span>
+                    <span ng-if="cartLength > 1">items</span>
+                    ${{totalAmount}}
+                </span>
+            </td>
+        </tr>  
+    </tfoot>  
+      
+  </table>      

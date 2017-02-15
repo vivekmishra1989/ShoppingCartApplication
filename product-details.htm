@@ -1,0 +1,228 @@
+<!--<span>{{currentElement.name}}</span>-->
+<img src="{{currentElement.icon}}" height="40" width="40" />
+<span class="bold">{{currentElement.name}}</span>
+<span>{{currentElement.description}}</span>
+<table class="table table-bordered details-table">
+    <thead>
+      <tr>
+        <th colspan="4">
+            <a href="#cart" ng-click="sendCartDetails()">
+                <img src="icons/cart-icon.png" height="25">
+                <span ng-if="!cartLength">
+                    No item in cart
+                </span>
+                <span ng-if="cartLength">
+                    {{cartLength}} 
+                    <span ng-if="cartLength == 1">item</span>
+                    <span ng-if="cartLength > 1">items</span>
+                    ${{totalAmount}}
+                </span>
+            </a>
+          </th>
+      </tr>
+    </thead>  
+    <tr>
+        <td class="icon-placeholder">
+            <span>Calories</span>
+        </td>  
+        <td class="">
+            <span>{{currentElement.Calories}}</span>
+        </td>  
+        <td>
+        </td>   
+    </tr>
+    <tr>
+        <td class="icon-placeholder">
+            <span>Carotenoid</span>
+        </td>  
+        <td class="">
+            <div class="circles" ng-class="{selected: currentElement.Carotenoid>=1}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Carotenoid>=2}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Carotenoid>=3}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Carotenoid==4}"></div>
+        </td>  
+        <td>
+            <div ng-if="currentElement.Carotenoid==0">
+                <span class="bold">Negligible</span>
+                <span>Below 5% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Carotenoid==1">
+                <span class="bold">Low</span>
+                <span>Between 5% and 10% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Carotenoid==2">
+                <span class="bold">Average</span>
+                <span>Between 10% and 20% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Carotenoid==3">
+                <span class="bold">High</span>
+                <span>Between 20% and 50% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Carotenoid==4">
+                <span class="bold">Very High</span>
+                <span>above 50% of recommended daily value</span>
+            </div>
+        </td>   
+    </tr>
+    <tr>
+        <td class="icon-placeholder">
+            <span>Fiber</span>
+        </td>  
+        <td class="">
+            <div class="circles" ng-class="{selected: currentElement.Fiber>=1}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Fiber>=2}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Fiber>=3}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Fiber==4}"></div>
+        </td>  
+        <td>
+            <div ng-if="currentElement.Fiber==0">
+                <span class="bold">Negligible</span>
+                <span>Below 5% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Fiber==1">
+                <span class="bold">Low</span>
+                <span>Between 5% and 10% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Fiber==2">
+                <span class="bold">Average</span>
+                <span>Between 10% and 20% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Fiber==3">
+                <span class="bold">High</span>
+                <span>Between 20% and 50% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Fiber==4">
+                <span class="bold">Very High</span>
+                <span>above 50% of recommended daily value</span>
+            </div>
+        </td>     
+    </tr>
+    <tr>
+        <td class="icon-placeholder">
+            <span>Folate</span>
+        </td>  
+        <td class="">
+            <div class="circles" ng-class="{selected: currentElement.Folate>=1}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Folate>=2}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Folate>=3}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Folate==4}"></div>
+        </td>  
+        <td>
+            <div ng-if="currentElement.Folate==0">
+                <span class="bold">Negligible</span>
+                <span>Below 5% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Folate==1">
+                <span class="bold">Low</span>
+                <span>Between 5% and 10% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Folate==2">
+                <span class="bold">Average</span>
+                <span>Between 10% and 20% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Folate==3">
+                <span class="bold">High</span>
+                <span>Between 20% and 50% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Folate==4">
+                <span class="bold">Very High</span>
+                <span>above 50% of recommended daily value</span>
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td class="icon-placeholder">
+            <span>Potassium</span>
+        </td>  
+        <td class="">
+            <div class="circles" ng-class="{selected: currentElement.Potassium>=1}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Potassium>=2}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Potassium>=3}"></div>
+            <div class="circles" ng-class="{selected: currentElement.Potassium==4}"></div>
+        </td>  
+        <td>
+            <div ng-if="currentElement.Potassium==0">
+                <span class="bold">Negligible</span>
+                <span>Below 5% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Potassium==1">
+                <span class="bold">Low</span>
+                <span>Between 5% and 10% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Potassium==2">
+                <span class="bold">Average</span>
+                <span>Between 10% and 20% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Potassium==3">
+                <span class="bold">High</span>
+                <span>Between 20% and 50% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.Potassium==4">
+                <span class="bold">Very High</span>
+                <span>above 50% of recommended daily value</span>
+            </div>
+        </td>   
+    </tr>
+    <tr>
+        <td class="icon-placeholder">
+            <span>VitaminC</span>
+        </td>  
+        <td class="">
+            <div class="circles" ng-class="{selected: currentElement.VitaminC>=1}"></div>
+            <div class="circles" ng-class="{selected: currentElement.VitaminC>=2}"></div>
+            <div class="circles" ng-class="{selected: currentElement.VitaminC>=3}"></div>
+            <div class="circles" ng-class="{selected: currentElement.VitaminC==4}"></div>
+        </td>    
+        <td>
+            <div ng-if="currentElement.VitaminC==0">
+                <span class="bold">Negligible</span>
+                <span>Below 5% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.VitaminC==1">
+                <span class="bold">Low</span>
+                <span>Between 5% and 10% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.VitaminC==2">
+                <span class="bold">Average</span>
+                <span>Between 10% and 20% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.VitaminC==3">
+                <span class="bold">High</span>
+                <span>Between 20% and 50% of recommended daily value</span>
+            </div>
+            <div ng-if="currentElement.VitaminC==4">
+                <span class="bold">Very High</span>
+                <span>above 50% of recommended daily value</span>
+            </div>
+        </td>    
+    </tr>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <img src="icons/cart-icon.png" height="25">
+                <span ng-if="!cartLength" class="bold">
+                    No item in cart
+                </span>
+                <span ng-if="cartLength" class="bold">
+                    {{cartLength}} 
+                    <span ng-if="cartLength == 1">item</span>
+                    <span ng-if="cartLength > 1">items</span>
+                    ${{totalAmount}}
+                </span>
+            </td>
+        </tr>  
+    </tfoot>  
+      
+  </table>
+
+<div class="button-group">
+    <button type="button" class="btn btn-success">
+        <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
+    </button><br>
+    <button type="button" ng-click="removeFromCart()" ng-disabled="{{!elementInCart}}" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span> Remove from cart
+    </button><br>
+    <a href="#/">
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-step-backward"></span>Back to store</button>
+    </a>
+</div>

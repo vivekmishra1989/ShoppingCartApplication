@@ -1,0 +1,60 @@
+<div class="cart-intro">
+    <span> Thanks for shopping at the Angular Store</span><br>
+    <span> This is your shopping cart. Here you can edit the items, go back to the store, clear the cart or check out</span>
+</div>
+<table class="table table-bordered cart-table">
+    <thead>
+      <tr>
+        <th>
+            <span>Item</span>
+          </th>
+        <th>
+            <span>Quantity</span>
+        </th>
+        <th>
+            <span>Price</span>
+        </th>
+        <th></th>
+      </tr>
+    </thead>  
+    <tbody>
+        <tr ng-repeat="item in cart">
+            <td>{{item.name}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.currency}} {{item.price * item.quantity}}</td>
+            <td><span class="glyphicon glyphicon-remove"></span></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                <span class="bold">Total</span>
+            </td>
+            <td>
+                <span>{{cartLength}}</span>
+            </td>
+            <td>
+                <span>$ {{totalAmount}}</span>
+            </td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="button-group button-group-cart">
+    <a href="#/">
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-step-backward"></span>Back to store</button>
+    </a><br>
+    <a href="#/">
+        <button type="button" ng-click="clearCart()" ng-disabled="{{!cartLength}}" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span> Clear cart
+        </button><br>
+    </a>
+    <button type="button" class="btn btn-primary">
+        <span class="glyphicon glyphicon-check"></span> Checkout using Paypal
+    </button><br>
+    <button type="button" class="btn btn-primary">
+        <span class="glyphicon glyphicon-check"></span> Checkout using Google
+    </button>
+    
+</div>

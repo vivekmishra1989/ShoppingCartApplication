@@ -1,0 +1,12 @@
+{"list":
+    [
+        {"id":"1","name":"Apple","icon":"icons/apple.jpg", "description":"An Apple a day keeps doctor away","price":12,"currency":"$", "Calories":"90","Carotenoid":"0","Fiber":"2","Folate":"0","Potassium":"2","VitaminC":"1","quantity":0},
+        {"id":"2","name":"Grapes","icon":"icons/grapes.jpg", "description":"Wine is good, but grape is better","price":5,"currency":"$", "Calories":"50","Carotenoid":"0","Fiber":"3","Folate":"0","Potassium":"2","VitaminC":"4","quantity":0},
+        {"id":"3","name":"Oranges","icon":"icons/oranges.jpg", "description":"Very tasty","price":6,"currency":"$", "Calories":"60","Carotenoid":"0","Fiber":"4","Folate":"3","Potassium":"0","VitaminC":"2","quantity":0},
+        {"id":"4","name":"Mango","icon":"icons/mango.jpg", "description":"Most loved fruit","price":10,"currency":"$", "Calories":"70","Carotenoid":"2","Fiber":"3","Folate":"2","Potassium":"0","VitaminC":"0","quantity":0},
+        {"id":"5","name":"Banana","icon":"icons/banana.jpg", "description":"Very nutritious","price":1,"currency":"$", "Calories":"190","Carotenoid":"0","Fiber":"1","Folate":"0","Potassium":"3","VitaminC":"3","quantity":0},
+        {"id":"6","name":"Guava","icon":"icons/guava.jpg", "description":"Kids love Guave","price":2,"currency":"$", "Calories":"100","Carotenoid":"3","Fiber":"3","Folate":"0","Potassium":"2","VitaminC":"3","quantity":0},
+        {"id":"7","name":"Pineapple","icon":"icons/pineapple.jpg", "description":"Enjoy it, but forget to peel first","price":7,"currency":"$", "Calories":"40","Carotenoid":"0","Fiber":"3","Folate":"4","Potassium":"3","VitaminC":"2","quantity":0},
+        {"id":"8","name":"Papaya","icon":"icons/papaya.jpg", "description":"Vey popular for breakfast","price":5,"currency":"$", "Calories":"80","Carotenoid":"0","Fiber":"0","Folate":"2","Potassium":"3","VitaminC":"4","quantity":0}
+    ]
+}
